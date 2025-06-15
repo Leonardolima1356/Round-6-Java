@@ -28,15 +28,24 @@ public class Main {
 
             switch (opcao) {
                 case 1: cadastrarParticipante(sc);
+                break;
                 case 2: cadastrarLocal(sc);
+                break;
                 case 3: cadastrarDesafio(sc);
+                break;
                 case 4: editarOuExcluirParticipante(sc);
+                break;
                 case 5: editarOuExcluirDesafio(sc);
+                break;
                 case 6: visualizarParticipantes();
+                break;
                 case 7: visualizarDesafios();
+                break;
                 case 8: visualizarLocais();
+                break;
                 case 0: System.out.println("Saindo...");
-                default -> System.out.println("Opção inválida!");
+                break;
+                default: System.out.println("Opção inválida!");
             }
         } while (opcao != 0);
 
