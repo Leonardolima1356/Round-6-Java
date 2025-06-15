@@ -57,8 +57,8 @@ public class Desafio {
 
     @Override
     public String toString() {
-        return "Desafio: " + nome + ", Mínimo Participantes: " + minimoParticipantes +
-                ", Máximo Aprovados: " + maximoAprovados + ", Local: " + local.getNome() +
-                ", Regras: " + regras.toString();
+        return "\nDesafio: " + nome + "\nMínimo Participantes: " + minimoParticipantes +
+                "\nMáximo Aprovados: " + maximoAprovados + "\nLocal: " + local.getNome() +
+                "\nRegras: \n" + regras.toString();
     }
 }
