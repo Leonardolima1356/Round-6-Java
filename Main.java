@@ -27,15 +27,15 @@ public class Main {
             sc.nextLine();
 
             switch (opcao) {
-                case 1 -> cadastrarParticipante(sc);
-                case 2 -> cadastrarLocal(sc);
-                case 3 -> cadastrarDesafio(sc);
-                case 4 -> editarOuExcluirParticipante(sc);
-                case 5 -> editarOuExcluirDesafio(sc);
-                case 6 -> visualizarParticipantes();
-                case 7 -> visualizarDesafios();
-                case 8 -> visualizarLocais();
-                case 0 -> System.out.println("Saindo...");
+                case 1: cadastrarParticipante(sc);
+                case 2: cadastrarLocal(sc);
+                case 3: cadastrarDesafio(sc);
+                case 4: editarOuExcluirParticipante(sc);
+                case 5: editarOuExcluirDesafio(sc);
+                case 6: visualizarParticipantes();
+                case 7: visualizarDesafios();
+                case 8: visualizarLocais();
+                case 0: System.out.println("Saindo...");
                 default -> System.out.println("Opção inválida!");
             }
         } while (opcao != 0);
