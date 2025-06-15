@@ -28,24 +28,26 @@ public class Main {
 
             switch (opcao) {
                 case 1: cadastrarParticipante(sc);
-                break;
+                    break;
                 case 2: cadastrarLocal(sc);
-                break;
+                    break;
                 case 3: cadastrarDesafio(sc);
-                break;
+                    break;
                 case 4: editarOuExcluirParticipante(sc);
-                break;
+                    break;
                 case 5: editarOuExcluirDesafio(sc);
-                break;
+                    break;
                 case 6: visualizarParticipantes();
-                break;
+                    break;
                 case 7: visualizarDesafios();
-                break;
+                    break;
                 case 8: visualizarLocais();
-                break;
-                case 0: System.out.println("Saindo...");
-                break;
-                default: System.out.println("Opção inválida!");
+                    break;
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
             }
         } while (opcao != 0);
 
@@ -57,11 +59,18 @@ public class Main {
         String nome = sc.nextLine();
         System.out.print("Número: ");
         int numero = sc.nextInt();
+        sc.nextLine();
         System.out.print("Idade: ");
         int idade = sc.nextInt();
         sc.nextLine();
+        System.out.print("Data de Nascimento: ");
+        String dataNascimento = sc.nextLine();
+        System.out.print("Gênero (Masculino/Feminino): ");
+        String genero = sc.nextLine();
+        System.out.print("Endereço: ");
+        String endereco = sc.nextLine();
 
-        participantes.add(new Participante(nome, numero, idade));
+        participantes.add(new Participante(nome, numero, idade, dataNascimento, genero, endereco));
         System.out.println("Participante cadastrado com sucesso!");
     }
 
@@ -166,6 +175,13 @@ public class Main {
             System.out.print("Nova Idade: ");
             participante.setIdade(sc.nextInt());
             sc.nextLine();
+            System.out.print("Nova Data de Nascimento (dd/mm/aaaa): ");
+            participante.setDataNascimento(sc.nextLine());
+            System.out.print("Novo Gênero (Masculino/Feminino): ");
+            participante.setGenero(sc.nextLine());
+            System.out.print("Novo Endereço: ");
+            participante.setEndereco(sc.nextLine());
+
             System.out.println("Participante editado com sucesso.");
         } else if (escolha == 2) {
             participantes.remove(participante);
@@ -210,21 +226,21 @@ public class Main {
     }
 
     public static void visualizarParticipantes() {
-        System.out.println("\n==== PARTICIPANTES ====");
+        System.out.println("\n---- PARTICIPANTES ----");
         for (Participante p : participantes) {
             System.out.println(p);
         }
     }
 
     public static void visualizarDesafios() {
-        System.out.println("\n==== DESAFIOS ====");
+        System.out.println("\n---- DESAFIOS ----");
         for (int i = 0; i < desafios.size(); i++) {
             System.out.println(i + " - " + desafios.get(i));
         }
     }
 
     public static void visualizarLocais() {
-        System.out.println("\n==== LOCAIS ====");
+        System.out.println("\n---- LOCAIS ----");
         for (Local l : locais) {
             System.out.println(l);
         }
