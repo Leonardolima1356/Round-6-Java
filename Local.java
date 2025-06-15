@@ -25,6 +25,6 @@ public class Local {
 
     @Override
     public String toString() {
-        return "Local: " + nome + ", Capacidade Máxima: " + capacidadeMaxima;
+        return "Local: " + nome + "\nCapacidade Máxima: \n" + capacidadeMaxima;
     }
 }
