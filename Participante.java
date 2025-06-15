@@ -37,6 +37,6 @@ public class Participante {
 
     @Override
     public String toString() {
-        return "Nome: " + nome + ", Número: " + numero + ", Idade: " + idade;
+        return "\nNome: " + nome + "\nNúmero: " + numero + "\nIdade: \n" + idade;
     }
 }
